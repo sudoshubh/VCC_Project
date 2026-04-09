@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant User
+    participant HospitalWorkloadSimulator as Hospital Workload Simulator
+    participant ThresholdScaler
+    participant RLAgent as RL Agent (PPO)
+    participant Cloud as Cloud (AWS)
+
+    User->>HospitalWorkloadSimulator: Generate hospital CPU workload data
+    HospitalWorkloadSimulator->>ThresholdScaler: Provide workload data
+    ThresholdScaler->>Cloud: Simulate threshold-based scaling
+    ThresholdScaler->>User: Output baseline results (SLA, cost, VMs)
+    HospitalWorkloadSimulator->>RLAgent: Provide workload data
+    RLAgent->>Cloud: Train RL agent for scaling
+    RLAgent->>User: Output RL results (SLA, cost, VMs)
+    User->>User: Compare RL vs Threshold results
