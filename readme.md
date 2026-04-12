@@ -67,5 +67,5 @@ This project demonstrates intelligent auto-scaling of cloud resources for a hosp
 - [Stable-Baselines3](https://stable-baselines3.readthedocs.io/)
 - [Gymnasium](https://gymnasium.farama.org/)
 - [AWS Auto Scaling](https://aws.amazon.com/autoscaling/)
-- [Video Link](https://youtu.be/fBFIDBAqUJc)
+- [Video Link](https://youtu.be/G8beP2MH_ms)
 ---
